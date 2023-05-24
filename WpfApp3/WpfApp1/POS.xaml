@@ -1,0 +1,351 @@
+﻿<Page x:Class="WpfApp1.POS"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="POS"
+      Background="white" Cursor="">
+
+    <Grid Grid.Column="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="500"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1">
+            <TextBlock Text="Number of Products: "
+                               Margin="10, 13, 0, 0"/>
+            <Label x:Name="items_count" Content="" HorizontalAlignment="Left" Margin="131,11,0,0" VerticalAlignment="Top" Width="125" Background="White"/>
+            <Label x:Name="lItem"
+                       Margin="0,38,0,10"
+                       Background="AliceBlue"/>
+            <Label x:Name="orderID" Content="Label" HorizontalAlignment="Left" Height="23" Margin="278,10,0,0" VerticalAlignment="Top" Width="112"/>
+        </Grid>
+
+        <ScrollViewer Grid.Column="1"
+                              Grid.Row="1">
+            <StackPanel>
+                <Grid Margin="0,0,0,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="ALL"
+                                    x:Name="all_btn"
+                                        Grid.Column="0"
+                                        Click="Button_Click_1"
+                                        Background="#F47E0C"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="BEVERAGES"
+                                    x:Name="beverages_btn"
+                                        Background="#F47E0C"
+                                        Grid.Column="1"
+                                        Click="beverages_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="BREADnBAKERY"
+                                    x:Name="breadnbakery_btn"
+                                        Background="#F47E0C"
+                                        Grid.Column="2"
+                                        Click="breadnbakery_btn_Click"
+                                        Height="50" Cursor="Hand"></Button>
+                </Grid>
+                <Grid Margin="0,0,0,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="CANNED GOODS"
+                                        Background="#F47E0C"
+                                        Grid.Column="0"
+                                        Click="Canned_Goods_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="BABY ITEMS"
+                                        Background="#F47E0C"
+                                        Grid.Column="1"
+                                        Click="baby_item_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="BAKERY"
+                                        Background="#F47E0C"
+                                        Grid.Column="2"
+                                        Click="bakery_btn_Click"
+                                        Height="50" Cursor="Hand"></Button>
+                </Grid>
+                <Grid Margin="0,0,0,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="CEREAL "
+                                        Background="#F47E0C"
+                                        Grid.Column="0"
+                                        Click="cereal_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="CONDIMENTSnSPICES"
+                                        Background="#F47E0C"
+                                        Grid.Column="1"
+                                        Click="condimentsNspices_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="DELI"
+                                        Background="#F47E0C"
+                                        Grid.Column="2"
+                                        Click="deli_btn_Click"
+                                        Height="50" Cursor="Hand"></Button>
+                </Grid>
+                <Grid Margin="0,0,0,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="FISHnSHELLFISH"
+                                        Background="#F47E0C"
+                                        Grid.Column="0"
+                                        Click="fishNshellfish_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="FROZEN FOODS"
+                                        Background="#F47E0C"
+                                        Grid.Column="1"
+                                        Click="frozen_foods_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="FRUITS"
+                                        Background="#F47E0C"
+                                        Grid.Column="2"
+                                        Click="fruits_btn_Click"
+                                        Height="50" Cursor="Hand"></Button>
+                </Grid>
+                <Grid Margin="0,0,0,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="HEALTH CARE"
+                                        Background="#F47E0C"
+                                        Grid.Column="0"
+                                        Click="health_care_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="HOUSEHOLD SUPPLIES"
+                                        Background="#F47E0C"
+                                        Grid.Column="1"
+                                        Click="household_supplies_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="MEAT"
+                                        Background="#F47E0C"
+                                        Grid.Column="2"
+                                        Click="meat_btn_Click"
+                                        Height="50" Cursor="Hand"></Button>
+                </Grid>
+                <Grid Margin="0,0,0,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="PASTAnRICE"
+                                        Background="#F47E0C"
+                                        Grid.Column="0"
+                                        Click="pastaNrice_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="PERSONAL CARE"
+                                        Background="#F47E0C"
+                                        Grid.Column="1"
+                                        Click="personal_care_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="SAUCESnOIL"
+                                        Background="#F47E0C"
+                                        Grid.Column="2"
+                                        Click="saucesNoil_btn_Click"
+                                        Height="50" Cursor="Hand"></Button>
+                </Grid>
+                <Grid Margin="0,0,0,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="SNACKS"
+                                        Background="#F47E0C"
+                                        Grid.Column="0"
+                                        Click="snacks_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                    <Button Content="VEGETABLES"
+                                        Background="#F47E0C"
+                                        Grid.Column="1"
+                                        Click="vegetables_btn_Click"
+                                        Margin="0,0,3,0"
+                                        Height="50" Cursor="Hand"></Button>
+                </Grid>
+
+            </StackPanel>
+        </ScrollViewer>
+
+
+
+
+
+        <DataGrid Grid.Column="0"
+                          Margin="0,0,0,10"
+                          x:Name="sItem">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="product_name" Header="Title" Binding="{Binding product_name}"/>
+                <DataGridTextColumn x:Name="product_price" Header="Price" Binding="{Binding product_price}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="removeItem"
+                                            Content="Remove"
+                                            Click="RemoveItem_Click"
+                                            Background="#E60023"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid 
+                      Cursor=""
+                      Background="#E7E4E6" Margin="0,377,0,0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0"
+                          Background="#000000">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"
+                                   Content="Sub Total"
+                                   FontSize="15"
+                                   FontWeight="SemiBold"
+                                   Foreground="#1FDD21"/>
+                    <Label Grid.Row="1"
+                                   Content="Deposit"
+                                   FontSize="15"
+                                   FontWeight="SemiBold"
+                                   Foreground="#1FDD21"/>
+                    <Label Grid.Row="2"
+                                   Content="Tax"
+                                   FontSize="15"
+                                   FontWeight="SemiBold"
+                                   Foreground="#1FDD21"/>
+                    <Label Grid.Row="3"
+                                   Content="Discount"
+                                   FontSize="15"
+                                   FontWeight="SemiBold"
+                                   Foreground="#1FDD21"/>
+                    <Label Grid.Row="4"
+                                   Content="Grand Total"
+                                   FontSize="18"
+                                   FontWeight="ExtraBold"
+                                   Foreground="#1FDD21"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Row="0"
+                                       x:Name="subtotal"
+                                       Text="0"
+                                       Foreground="#1FDD21"
+                                       FontSize="15"
+                                       FontWeight="SemiBold"
+                                       HorizontalAlignment="Right"/>
+                    <TextBlock Grid.Row="1"
+                                       x:Name="deposit"
+                                       Text="0.00"
+                                       Foreground="#1FDD21"
+                                       FontSize="15"
+                                       FontWeight="SemiBold"
+                                       HorizontalAlignment="Right"/>
+                    <TextBlock Grid.Row="2"
+                                       x:Name="taxItem"
+                                       Text="0.00"
+                                       Foreground="#1FDD21"
+                                       FontSize="15"
+                                       FontWeight="SemiBold"
+                                       HorizontalAlignment="Right"/>
+                    <TextBlock Grid.Row="3"
+                                       x:Name="discount"
+                                       Text="0.00"
+                                       Foreground="#1FDD21"
+                                       FontSize="15"
+                                       FontWeight="SemiBold"
+                                       HorizontalAlignment="Right"/>
+                    <TextBlock Grid.Row="4"
+                                       x:Name="total"
+                                       Text="0.00"
+                                       Foreground="#1FDD21"
+                                       FontSize="18"
+                                       FontWeight="ExtraBold"
+                                       HorizontalAlignment="Right"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1" Cursor="">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button Grid.Column="0"
+                                Margin="2"
+                                Grid.Row="0"
+                                Content="Receipt"
+                                Background="#E1EAF4"
+                                Foreground="#5C7AE9" Click="receipt_btn_Click"/>
+                
+                <Button Grid.Column="0"
+                                Margin="2"
+                                Grid.Row="2"
+                                Content="Clear"
+                                Background="#E1EAF4"
+                                Foreground="#5C7AE9"/>
+                
+                
+                
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Page>

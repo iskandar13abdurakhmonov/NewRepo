@@ -1,0 +1,137 @@
+﻿<Page x:Class="WpfApp1.Employee"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Employee"
+      Background="White">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Margin="65,28,65,56"
+                   x:Name="selected_image"/>
+            <Button Content="Select Image"
+                    VerticalAlignment="Bottom"
+                    Click="select_image"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0"
+                            Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Margin="2">
+                    <Label Content="Employee ID"/>
+                    <TextBox x:Name="emp_id"
+                                BorderThickness="1,1,1,1"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1"
+                            Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Margin="2">
+                    <Label Content="Employee Name"/>
+                    <TextBox BorderThickness="1,1,1,1"
+                             x:Name="emp_name"/>
+                </StackPanel>
+                <StackPanel Grid.Row="2"
+                            Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Margin="2">
+                    <Label Content="Date of Birth"/>
+                    <DatePicker x:Name="emp_dob"/>
+
+                </StackPanel>
+                <StackPanel Grid.Row="0"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Margin="2">
+                    <Label Content="Phone"/>
+                    <TextBox BorderThickness="1,1,1,1"
+                             x:Name="emp_phone"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Margin="2">
+                    <Label Content="Email"/>
+                    <TextBox BorderThickness="1,1,1,1"
+                             x:Name="emp_email"/>
+                </StackPanel>
+                <StackPanel Grid.Row="2"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Margin="2">
+                    <Label Content="Address"/>
+                    <TextBox BorderThickness="1,1,1,1"
+                             x:Name="emp_address"/>
+                </StackPanel>
+                <StackPanel Grid.Row="0"
+                            Grid.Column="2"
+                            VerticalAlignment="Center"
+                            Margin="2">
+                    <Label Content="Role"/>
+                    <TextBox BorderThickness="1,1,1,1"
+                             x:Name="emp_role"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1"
+                            Grid.Column="2"
+                            VerticalAlignment="Center"
+                            Margin="2">
+                    <Label Content="Password"/>
+                    <TextBox BorderThickness="1,1,1,1"
+                             x:Name="emp_password"/>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="1"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <Button Content="ADD"
+                        x:Name="emp_add"
+                        Margin="10,0,10,0" Click="emp_add_Click"/>
+                <Button Content="UPDATE"
+                        x:Name="emp_update"
+                        Margin="10,0,10,0" Click="emp_update_Click"/>
+                <Button Content="DELETE"
+                        x:Name="emp_delete"
+                        Margin="10,0,10,0" Cursor="Hand" Click="emp_delete_Click"/>
+                <Button Content="SEARCH"
+                        x:Name="emp_search"
+                        Margin="10,0,10,0" Cursor="Hand" Click="emp_search_Click"/>
+                <Button Content="CLEAR"
+                        x:Name="emp_clearn"
+                        Margin="0, 0, 10, 0"
+                        Cursor="Hand" Click="emp_clear_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
